@@ -5,7 +5,7 @@ const {Schema, model} = require(`mongoose`)
         unique: true,
         required: true,
         trim: true
-    },
+    }, 
     email: {
         type: String,
         unique: true,
