@@ -5,7 +5,7 @@ const {Schema, model} = require(`mongoose`)
         unique: true,
         required: true,
         trim: true
-    },
+    }, 
     email: {
         type: String,
         unique: true,
@@ -35,5 +35,5 @@ const {Schema, model} = require(`mongoose`)
  })
 
  const Users = model(`Users`, userSchema)
-
+//
  module.exports = Users
