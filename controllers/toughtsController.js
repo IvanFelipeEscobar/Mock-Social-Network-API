@@ -17,7 +17,7 @@ module.exports = {
             
     },
 // create new though
-    createThough (req, res){
+    createThought (req, res){
         Thoughts.create(req.body)
             .then((thought) => {
                 return Users.findByIdAndUpdate(
