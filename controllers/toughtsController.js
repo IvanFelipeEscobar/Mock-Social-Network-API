@@ -33,7 +33,7 @@ module.exports = {
             .catch((err) => res.status(500).json(err))
     },
 // edit though by id
-    updateThought (reg, res){
+    updateThought (req, res){
         Thoughts.findOneAndUpdate(
             {_id: req.params.thoughtId},
             {$set: req.body},
@@ -53,7 +53,7 @@ module.exports = {
             .then((thought)=>
                 !thought
                     ? res.status(404).json({message: `no thought found`})
-                    : Users.findByIdAndUpdate(
+                    : Users.findOneAndUpdate(
                         {thoughts: req.params.thoughtId},
                         {$pull: {thoughts: req.params.thoughtId}},
                         {new: true}
