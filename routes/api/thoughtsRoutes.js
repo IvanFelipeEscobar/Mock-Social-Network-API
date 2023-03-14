@@ -12,7 +12,7 @@ const {
 router.route(`/`).get(getThoughts).post(createThough)
 
 // route for /api/thoughts/:thoughtId
-router.route(`/thoughtId`).get(getSingleThought).put(updateThought).delete(deleteThought)
+router.route(`/:thoughtId`).get(getSingleThought).put(updateThought).delete(deleteThought)
 
 // route for /api/thoughts/:thoughtId/reactions
 router.route(`/:thoughtId/reactions`).post(createReaction)
